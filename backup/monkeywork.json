@@ -1,0 +1,315 @@
+[
+  {
+    "role": "user",
+    "content": "Could you please add the \"bug\" label to this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/label [bug]"
+  },
+  {
+    "role": "user",
+    "content": "I would like to request that you add the \"feature request\" label to this issue."
+  },
+  {
+    "role": "assistant",
+    "content": "/label [feature request]"
+  },
+  {
+    "role": "user",
+    "content": "Can you label this issue as \"high priority\"?"
+  },
+  {
+    "role": "assistant",
+    "content": "/label [high priority]"
+  },
+  {
+    "role": "user",
+    "content": "Could you apply the \"documentation\" label to this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/label [documentation]"
+  },
+  {
+    "role": "user",
+    "content": "I request that you add the \"help wanted\" label to this issue."
+  },
+  {
+    "role": "assistant",
+    "content": "/label [help wanted]"
+  },
+  {
+    "role": "user",
+    "content": "Can you please assign the \"bug fix\" label to this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/label [bug fix]"
+  },
+  {
+    "role": "user",
+    "content": "I would appreciate it if you could label this issue as \"enhancement\"."
+  },
+  {
+    "role": "assistant",
+    "content": "/label [enhancement]"
+  },
+  {
+    "role": "user",
+    "content": "Could you add the \"up-for-grabs\" label to this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/label [up-for-grabs]"
+  },
+  {
+    "role": "user",
+    "content": "I request that you label this issue as \"invalid\"."
+  },
+  {
+    "role": "assistant",
+    "content": "/label [invalid]"
+  },
+  {
+    "role": "user",
+    "content": "Can you please assign the \"question\" label to this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/label [question]"
+  },
+  {
+    "role": "user",
+    "content": "Would you mind applying the \"duplicate\" label to this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/label [duplicate]"
+  },
+  {
+    "role": "user",
+    "content": "Could you label this issue as \"won't fix\"?"
+  },
+  {
+    "role": "assistant",
+    "content": "/label [won't fix]"
+  },
+  {
+    "role": "user",
+    "content": "Could you please remove the \"bug\" label from this issue?"
+  },
+  { "role": "assistant", "content": "/unlabel [bug]" },
+  {
+    "role": "user",
+    "content": "I would like to request that you remove the \"feature request\" label from this issue."
+  },
+  { "role": "assistant", "content": "/unlabel [feature request]" },
+  {
+    "role": "user",
+    "content": "Can you unlabel this issue as \"high priority\"?"
+  },
+  { "role": "assistant", "content": "/unlabel [high priority]" },
+  {
+    "role": "user",
+    "content": "Could you remove the \"documentation\" label from this issue?"
+  },
+  { "role": "assistant", "content": "/unlabel [documentation]" },
+  {
+    "role": "user",
+    "content": "I request that you remove the \"help wanted\" label from this issue."
+  },
+  { "role": "assistant", "content": "/unlabel [help wanted]" },
+  {
+    "role": "user",
+    "content": "Can you please unassign the \"bug fix\" label from this issue?"
+  },
+  { "role": "assistant", "content": "/unlabel [bug fix]" },
+  {
+    "role": "user",
+    "content": "I would appreciate it if you could remove the \"enhancement\" label from this issue."
+  },
+  { "role": "assistant", "content": "/unlabel [enhancement]" },
+  {
+    "role": "user",
+    "content": "Could you unlabel this issue from \"up-for-grabs\"?"
+  },
+  { "role": "assistant", "content": "/unlabel [up-for-grabs]" },
+  {
+    "role": "user",
+    "content": "I request that you remove the \"invalid\" label from this issue."
+  },
+  { "role": "assistant", "content": "/unlabel [invalid]" },
+  {
+    "role": "user",
+    "content": "Can you please unassign the \"question\" label from this issue?"
+  },
+  { "role": "assistant", "content": "/unlabel [question]" },
+  {
+    "role": "user",
+    "content": "Would you mind removing the \"duplicate\" label from this issue?"
+  },
+  { "role": "assistant", "content": "/unlabel [duplicate]" },
+  {
+    "role": "user",
+    "content": "Could you unlabel this issue from \"won't fix\"?"
+  },
+  { "role": "assistant", "content": "/unlabel [won't fix]" },
+
+  {
+    "role": "user",
+    "content": "Can you please assign this issue to @User?"
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "I would like to request that @User be assigned to this issue."
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "Could you assign @User to work on this issue, please?"
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "I request that you assign @User as the owner of this issue."
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "Can you please add @User as a collaborator on this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "I would appreciate it if you could assign @User to review this issue."
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "Could you assign @User to provide feedback on this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "I request that you assign @User to verify the resolution of this issue."
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "Can you please assign @User to investigate this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "I would like to request that @User be assigned to triage this issue."
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "Could you assign @User to test the fix for this issue?"
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "I request that you assign @User to implement the solution for this issue."
+  },
+  {
+    "role": "assistant",
+    "content": "/assign @User"
+  },
+  {
+    "role": "user",
+    "content": "Can you please add this issue to the [name of milestone] milestone?"
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "I would like to request that you assign the [name of milestone] milestone to this issue."
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "Could you add this issue to the [name of milestone] sprint?"
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "I request that you assign the [name of milestone] release to this issue."
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "Can you please add this issue to the [name of milestone] iteration?"
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "I would appreciate it if you could assign the [name of milestone] target to this issue."
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "Could you add this issue to the [name of milestone] roadmap?"
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "I request that you assign the [name of milestone] deadline to this issue."
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "Can you please add this issue to the [name of milestone] version?"
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "I would like to request that you assign the [name of milestone] goal to this issue."
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "Could you add this issue to the [name of milestone] feature set?"
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" },
+  {
+    "role": "user",
+    "content": "I request that you assign the [name of milestone] project phase to this issue."
+  },
+  { "role": "assistant", "content": "/milestone [name of milestone]" }
+]

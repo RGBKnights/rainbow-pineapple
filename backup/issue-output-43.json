@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-6vokAWskNZXtv29GRtWUdpsGBvB83",
+  "object": "chat.completion",
+  "created": 1679237774,
+  "model": "gpt-3.5-turbo-0301",
+  "usage": {
+    "prompt_tokens": 362,
+    "completion_tokens": 157,
+    "total_tokens": 519
+  },
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "Sure! The new issue is requesting the creation of a C# .Net Azure Function Project that will use the SteamKit package to connect to Steam, login, start Dota2, and create a Dota2 custom lobby. \n\nTo address this issue, you can follow these steps:\n1. Create a new C# .Net Azure Function Project.\n2. Install the SteamKit package in the project.\n3. Write the code to connect to Steam, login, start Dota2, and create a Dota2 custom lobby.\n4. Test the code to ensure it is working as expected.\n5. Commit the code to the cautious-doodle repository.\n6. Close the issue once the code has been committed.\n\nI hope this helps! Let me know if you have any other questions."
+      },
+      "finish_reason": "stop",
+      "index": 0
+    }
+  ]
+}

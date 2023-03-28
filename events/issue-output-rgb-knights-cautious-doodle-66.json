@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-6yt90TTpo7hcW4lHQLAggFgk7ckx5",
+  "object": "chat.completion",
+  "created": 1679969674,
+  "model": "gpt-4-0314",
+  "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 323,
+    "total_tokens": 781
+  },
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "Issue Explanation:\nA user has submitted a new issue requesting the creation of a C# .Net Azure Function Project that leverages the SteamKit package to connect to Steam, log in, start Dota2, and create a custom Dota2 lobby.\n\nSimilar Issues:\nThere are no similar issues found in the previous messages.\n\nSuggested Labels:\n- enhancement\n- help wanted\n\nSuggested Milestones:\n- Create a new milestone for the Azure Function Project development.\n\nAssociated Branches and Files:\n- Branch: main (default branch)\n- File: ReadMe.md\n\nSuggested Actions:\n- Update the repository description and language to better reflect the project's purpose and technology stack.\n- Create a new branch for the development of this feature.\n\nStep-by-Step Solution:\n1. Update the repository description and language.\n2. Create a new branch for the development of the Azure Function Project.\n3. Research and gather information about the SteamKit package and its usage with C# .Net Azure Functions.\n4. Develop the Azure Function Project, ensuring it can connect to Steam using the SteamKit package.\n5. Implement the functionality to log in to Steam, start Dota2, and create a custom Dota2 lobby.\n6. Test the Azure Function Project to ensure it works as expected.\n7. Document the implementation and usage of the Azure Function Project in the ReadMe.md file.\n8. Create a pull request to merge the new branch into the main branch.\n9. Review and address any feedback from the repository owner or collaborators.\n10. Merge the pull request and close the issue once the feature is successfully implemented and tested."
+      },
+      "finish_reason": "stop",
+      "index": 0
+    }
+  ]
+}

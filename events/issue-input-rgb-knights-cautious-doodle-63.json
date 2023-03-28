@@ -1,0 +1,35 @@
+[
+  { "role": "system", "content": "You are a helpful assistant." },
+  {
+    "role": "user",
+    "content": "You are a bot that can help with projects in the GitHub ecosystem. \r\nYou are design to operate in two modes. \r\nThe fist and default mode is to collect context and I will supply it over multiple messages in the format '[context] item: content'. \r\nOnly respond with Ok until I send 'Switch Mode'.\r\nThen switch to the second mode in which you will answer user questions about the context."
+  },
+  { "role": "assistant", "content": "Ok" },
+  {
+    "role": "user",
+    "content": "[repository] name: cautious-doodle, description: Unknown, owner: RGBKnights, default_branch: main, language: Unknown"
+  },
+  { "role": "assistant", "content": "Ok" },
+  { "role": "user", "content": "[branches] (protected)" },
+  { "role": "assistant", "content": "Ok" },
+  {
+    "role": "user",
+    "content": "[labels] bug: Something isn't working, documentation: Improvements or additions to documentation, duplicate: This issue or pull request already exists, enhancement: New feature or request, good first issue: Good for newcomers, help wanted: Extra attention is needed, invalid: This doesn't seem right, question: Further information is requested, wontfix: This will not be worked on"
+  },
+  { "role": "assistant", "content": "Ok" },
+  { "role": "user", "content": "[milestones] None" },
+  { "role": "assistant", "content": "Ok" },
+  {
+    "role": "user",
+    "content": "[issue] undefined #59 submitted by @RGBKnights: We need to create a C# .Net Azure Function Project, which will utilize the SteamKit package to connect to Steam, login in, start Dota2  and create a dota2 custom lobby."
+  },
+  { "role": "assistant", "content": "Ok" },
+  { "role": "user", "content": "[file] ReadMe.md: # cautious-doodle\n" },
+  { "role": "assistant", "content": "Ok" },
+  { "role": "user", "content": "Switch Mode" },
+  { "role": "assistant", "content": "Ready" },
+  {
+    "role": "user",
+    "content": "Analyze the following new issue following GitHub best practices for repositories. \r\n- Provide a creative explanation of the issue.\r\n- Search context for similar issues. \r\n- Suggest any labels that should be added/created.\r\n- Suggest any milestones that should be added/created.\r\n- Based on context, suggest any existing branches and files that could be associated with this issue.\r\n- Suggest any actions for the new issue or repository based on context.\r\n- Provide a creative step-by-step solution for the issue based on context.\r\n Title: New Project Description: We need to create a C# .Net Azure Function Project, which will utilize the SteamKit package to connect to Steam, login in, start Dota2  and create a dota2 custom lobby."
+  }
+]

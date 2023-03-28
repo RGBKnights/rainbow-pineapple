@@ -1,0 +1,29 @@
+{
+    "name": "rainbow-pineapple",
+    "version": "1.0.0",
+    "private": true,
+    "description": "A bot that automates code production, review and deployment through GitHub projects, issues, pull requests, actions and releases",
+    "author": "RGBKnights",
+    "license": "MIT",
+    "homepage": "https://github.com/RGBKnights/rainbow-pineapple",
+    "keywords": [
+        "probot",
+        "github",
+        "probot-app"
+    ],
+    "scripts": {
+        "server": "probot run ./index.js"
+    },
+    "dependencies": {
+        "change-case": "^4.1.2",
+        "openai": "^3.2.1",
+        "probot": "^12.3.0"
+    },
+    "engines": {
+        "node": ">= 16.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.21",
+        "typescript": "^5.0.0"
+    }
+}
