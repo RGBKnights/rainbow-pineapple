@@ -1,8 +1,8 @@
-Analyze the following new issue following GitHub best practices for repositories. 
-- Provide a creative explanation of the issue.
-- Search preivous messages for similar issues. 
-- Suggest any labels that should be added/created.
-- Suggest any milestones that should be added/created.
-- Based on preivous messages, suggest any existing branches and files that could be associated with this issue.
-- Suggest any actions for the new issue or repository based on preivous messages.
-- Provide a creative step-by-step solution for the issue based on preivous messages.
+Analyze the following new issue following GitHub best practices for repositories.
+Provide a creative explanation of the issue. 
+Are there any similar issues already?
+Suggest any existing labels that should be added or new labels that should be created. 
+Suggest any existing milestones that should be added or new milestones that should be created following semantic versioning.
+Suggest any existing branches that apply to the new issue.
+Search the files that could be causing the new issue or be associated with the new issue. 
+Think about the solution step-by-step and provide a detailed action plan on to solve ths issue.

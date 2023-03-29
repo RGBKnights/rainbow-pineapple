@@ -1,0 +1,15 @@
+/issue comment <number> --body <string>
+/issue close <number>
+/issue edit <number> --add-assignee <login>
+/issue edit <number> --add-label <name>
+/issue edit <number> --milestone <name>
+/issue edit <number> --remove-assignee <login>
+/issue edit <number> --remove-label <name>
+/issue lock <number>
+/issue unlock <number>
+/issue reopen <number>
+/issue develop <number> --name 'branch' --base 'main'
+/label create <name> --description <string>
+/milestone create <version> --description <string> --due-date <date>
+/milestone edit <version> --description <string>
+/milestone edit <version> --due-date <date>

@@ -1,0 +1,9 @@
+Analyze the following new issue following GitHub best practices for repositories. 
+- Provide a creative explanation of the issue.
+- Search preivous messages for similar issues. 
+- Suggest any labels that should be added/created.
+- Suggest any commands that should be excuted for this issue.
+- Suggest any milestones that should be added/created.
+- Based on preivous messages, suggest any existing branches and files that could be associated with this issue.
+- Suggest any actions for the new issue or repository based on preivous messages.
+- Provide a creative step-by-step solution for the issue based on preivous messages.

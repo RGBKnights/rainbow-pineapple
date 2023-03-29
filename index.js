@@ -182,62 +182,63 @@ module.exports = function server(app) {
       {
         const messages = [{"role": "system", "content": "You are a helpful assistant."}];
         messages.push({"role": "user", "content": readData("./prompts/bot_modes.txt")});
-        messages.push({"role": "assistant", "content": "Ok"});
+        messages.push({"role": "assistant", "content": "OK"});
 
         const repoName = state.repository.name;
         const repoOwner = state.repository.owner.login;
 
-        {
-          let content = [`[repository] ${repoOwner}\\${repoName}`]
-          if(state.repository.description) {
-            content.push(`[description] ${state.repository.description}`);
-          }
-          if(state.repository.default_branch) {
-            content.push(`[default branch] ${state.repository.default_branch}`);
-          }
-          if(state.repository.language) {
-            content.push(`[language] ${state.repository.language}`);
-          }
-          messages.push({"role": "user", "content": content });
-          messages.push({"role": "assistant", "content": "Ok"});
+        // const commands = readData("./prompts/commands.txt").split("\n");
+        // for (const cmd of commands) {
+        //   messages.push({"role": "user", "content": `[command] ${cmd}` });
+        //   messages.push({"role": "assistant", "content": "OK"});
+        // }
+        
+        messages.push({"role": "user", "content": `[repository] ${repoOwner}\\${repoName}` });
+        messages.push({"role": "assistant", "content": "OK"});
+
+        if(state.repository.description) {
+          messages.push({"role": "user", "content": `[description] ${state.repository.description}` });
+          messages.push({"role": "assistant", "content": "OK"});
+        }
+
+        if(state.repository.default_branch) {
+          messages.push({"role": "user", "content": `[default branch] ${state.repository.default_branch}` });
+          messages.push({"role": "assistant", "content": "OK"});
+        }
+
+        if(state.repository.language) {
+          messages.push({"role": "user", "content": `[language] ${state.repository.language}` });
+          messages.push({"role": "assistant", "content": "OK"});
         }
 
         for (const branch of state.branches) {
-          messages.push({"role": "user", "content": `[branch] ${branch.name}` });
-          messages.push({"role": "assistant", "content": "Ok"});
+          messages.push({"role": "user", "content": `[branch] '${branch.name}'` });
+          messages.push({"role": "assistant", "content": "OK"});
         }
         
         for (const label of state.labels) {
-          messages.push({"role": "user", "content": `[label] ${l.name}: ${l.description}` });
-          messages.push({"role": "assistant", "content": "Ok"});
+          messages.push({"role": "user", "content": `[label] '${label.name}': ${label.description}` });
+          messages.push({"role": "assistant", "content": "OK"});
         }
         
-        for (const key in state.milestones) {
-          if (Object.hasOwnProperty.call(object, key)) {
-            const element = object[key];
-            
-          }
+        for (const milestone of state.milestones) {
+          messages.push({"role": "user", "content": `[milestone] '${milestone.title}'` });
+          messages.push({"role": "assistant", "content": "OK"});
         }
-        if(state.milestones.length > 0) {
-          const milestones = state.milestones.map(l => l.tile).join(', ');
-          messages.push({"role": "user", "content": `[milestone] ${milestones}` });
-          messages.push({"role": "assistant", "content": "Ok"});
-        }
-        
       
         for (const i of state.issues) {
           messages.push({"role": "user", "content": `[issue] ${i.title} #${i.number} submitted by @${i.author}: ${i.body}`});
-          messages.push({"role": "assistant", "content": "Ok"});
+          messages.push({"role": "assistant", "content": "OK"});
         }
 
         for (const file of state.files) {
           messages.push({"role": "user", "content": `[file] ${file.path}: ${file.content}`});
-          messages.push({"role": "assistant", "content": "Ok"});
+          messages.push({"role": "assistant", "content": "OK"});
         }
 
-        messages.push({"role": "user", "content": "Switch Mode"});
-        messages.push({"role": "assistant", "content": "Ready"});
-        messages.push({"role": "user", "content": readData("./prompts/analysis_issue.txt") + ` [issue] ${issue.title} #${issue.number}: ${issue.body}`});
+        messages.push({"role": "user", "content": "Are you ready?"});
+        messages.push({"role": "assistant", "content": "READY"});
+        messages.push({"role": "user", "content": readData("./prompts/analysis_issue.txt") + ` [issue] ${issue.title} #${issue.number} submitted by @${issue.user.login}: ${issue.body}`});
         
         writeData(repoOwner, repoName, "issue-input", issue.number, messages);
         
@@ -245,7 +246,7 @@ module.exports = function server(app) {
           model: openaimModel,
           messages: messages,
           temperature: 0.1,
-          max_tokens: 1000,
+          max_tokens: 4000,
         });
 
         writeData(repoOwner, repoName, "issue-output", issue.number, response.data);
@@ -263,11 +264,6 @@ module.exports = function server(app) {
         }
       }
 
-      // TODO:
-      // Ask AI for applicable Milestones?
-      // Ask AI for applicable Labels?
-      // Ask AI for similar Issues?
-      
     } catch (error) {
       console.log('issues.opened', error);
     }
@@ -276,55 +272,55 @@ module.exports = function server(app) {
   app.on("issue_comment.created", async (context) => {
     //console.log('issue_comment.created', context.payload);
     
-    if(context.isBot) return;
+    // if(context.isBot) return;
 
-    const comment = context.payload.comment;
+    // const comment = context.payload.comment;
     
-    {
-      // Skip is the context.payload.sender is not a Collaborator - No Authority to run Commands.
-      const { data: authority } = await context.octokit.repos.getCollaboratorPermissionLevel({
-        owner: repoOwner,
-        repo: repoName,
-        username: context.payload.sender.login,
-      });
+    // {
+    //   // Skip is the context.payload.sender is not a Collaborator - No Authority to run Commands.
+    //   const { data: authority } = await context.octokit.repos.getCollaboratorPermissionLevel({
+    //     owner: repoOwner,
+    //     repo: repoName,
+    //     username: context.payload.sender.login,
+    //   });
 
-      switch (authority?.permission) {
-        case 'admin':
-        case 'write':
-          {
-            const prompt = readData("./prompts/isssue_comment_command.txt") + comment;
-            const messages = [
-              {"role": "system", "content": "You are a helpful assistant."},
-              {"role": "user", "content": prompt }
-            ];
+    //   switch (authority?.permission) {
+    //     case 'admin':
+    //     case 'write':
+    //       {
+    //         const prompt = readData("./prompts/isssue_comment_command.txt") + comment;
+    //         const messages = [
+    //           {"role": "system", "content": "You are a helpful assistant."},
+    //           {"role": "user", "content": prompt }
+    //         ];
 
-            writeData(repoOwner, repoName, "issue_comment-input", issue.number, messages);
+    //         writeData(repoOwner, repoName, "issue_comment-input", issue.number, messages);
 
-            const response = await openai.createChatCompletion({
-              model: openaimModel,
-              messages: messages,
-              temperature: 0.1,
-              max_tokens: 1000,
-            });
-            writeData(repoOwner, repoName, "issue_comment-output", issue.number, response.data);
+    //         const response = await openai.createChatCompletion({
+    //           model: openaimModel,
+    //           messages: messages,
+    //           temperature: 0.1,
+    //           max_tokens: 1000,
+    //         });
+    //         writeData(repoOwner, repoName, "issue_comment-output", issue.number, response.data);
 
-            const choices = response.data.choices.filter(c => c.finish_reason == "stop")
-            for (const choice of choices) {
-              await context.octokit.issues.createComment(
-                {
-                  owner: repoOwner,
-                  repo: repoName,
-                  issue_number : issue.number,
-                  body: choice.message.content,
-                }
-              );
-            }
-          }
-          break;
-        default:
-          break;
-      }
-    }
+    //         const choices = response.data.choices.filter(c => c.finish_reason == "stop")
+    //         for (const choice of choices) {
+    //           await context.octokit.issues.createComment(
+    //             {
+    //               owner: repoOwner,
+    //               repo: repoName,
+    //               issue_number : issue.number,
+    //               body: choice.message.content,
+    //             }
+    //           );
+    //         }
+    //       }
+    //       break;
+    //     default:
+    //       break;
+    //   }
+    // }
 
     // TODO:
     // (Chat) Ask AI for reponse to the comment in the context of this issue. (last word protocol).
