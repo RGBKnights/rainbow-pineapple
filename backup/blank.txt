@@ -1,7 +1,0 @@
-Hello @RGBKnights, and thanks for the invite 🌈🍍!
-
-⚠️⚠️⚠️ WANRING ⚠️⚠️⚠️
-
-🌈🍍 is still in beta, and because of that, we not supporting adding the bot to the existing repository.
-
-The bot can and will often overwrite existing files and create files. While we have the convenience of git behind us, it can generate a lot of noise which will be annoying to the development of the existing project. The team is working on it, but if you don't care and want to try it anyways, react to this issue with 🚀!

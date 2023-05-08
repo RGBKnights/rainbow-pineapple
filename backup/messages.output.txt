@@ -1,8 +1,0 @@
-The new issue is requesting the creation of a C# .Net Azure Function Project which will utilize the SteamKit package to connect to Steam and create a custom lobby. This issue appears to be a task for a developer with experience in C# and Azure Functions. To resolve the issue, the following steps could be taken:
-
-1. Assign the issue to a developer with experience in C# and Azure Functions.
-2. Provide the developer with the necessary context and resources to complete the task.
-3. Set a due date for the issue and monitor its progress.
-4. Once the issue is resolved, close it and merge any necessary changes to the main branch.
-
-

@@ -1,7 +1,0 @@
-Hello @{OWNER} and thanks for invite 🌈🍍!
-
-🌈🍍 is a powerful, versatile, and efficient GitHub bot that automates various aspects of the software development process, including code production, code review, actions, and releases. 
-
-The bot streamlines workflows, reduces human error, and accelerates project completion. 
-
-Designed with a user-friendly interface and integration capabilities, 🌈🍍 is the ultimate tool to enhance your GitHub experience.
