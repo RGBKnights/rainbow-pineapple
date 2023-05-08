@@ -13,3 +13,60 @@
 /milestone create <version> --description <string> --due-date <date>
 /milestone edit <version> --description <string>
 /milestone edit <version> --due-date <date>
+
+
+---OTHER ONES FROM EXCEL SHEET---
+/demilestone [name of milestone]
+/close -done
+/close -rejected
+/reopen
+/delete
+/bug
+/feature
+/names
+/project
+/assignees [list of assignees]
+/assign
+/unassign
+/development -b [name of branch]
+/development -pr [name of pull request]
+/reactions [emoji]
+/comment
+/events
+/timeline events
+
+
+---GIT COMMANDS (Prob unnecessary as is not part of issues)---
+/remote add [alias] [url]
+/fetch [alias]
+/merge [alias]/[branch]
+/push [alias] [branch]
+/pull
+/rebase [branch]
+/reset --hard [commit]
+/rm [file]
+/mv [existing-path] [new-path]
+/log
+/log --stat -M
+/log --follow [file]
+/diff branchB...branchA
+/show [SHA]
+/stash
+/stash list
+/stash pop
+/stash drop
+/branch
+/branch [branch-name]
+/checkout
+/merge
+/init
+/clone [url]
+/config --global user.name “[firstname lastname]”
+/config --global user.email “[valid-email]”
+/config --global color.ui auto
+/status
+/add [file]
+/reset [file]
+/diff
+/diff --staged
+/commit -m "[descriptive message]"

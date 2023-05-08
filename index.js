@@ -157,7 +157,7 @@ module.exports = function server(app) {
     apiKey: process.env.OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
-  const openaimModel = "gpt-4";
+  const chatModel = "gpt-4";
 
   app.on("installation.created", async (context) => {
     // Should we do anything automaticly here..?
@@ -173,9 +173,6 @@ module.exports = function server(app) {
       const issue = context.payload.issue;
 
       // get state of Repository to provide context to the AI.
-      const excludes = {
-        issues: [issue.id] // Remove the current issue from the context to it can be added to the question.
-      }
       let state = await getState(context, excludes);
 
       // Ask AI for an understanding of issue based on the project's context.
@@ -238,15 +235,15 @@ module.exports = function server(app) {
 
         messages.push({"role": "user", "content": "Are you ready?"});
         messages.push({"role": "assistant", "content": "READY"});
-        messages.push({"role": "user", "content": readData("./prompts/analysis_issue.txt") + ` [issue] ${issue.title} #${issue.number} submitted by @${issue.user.login}: ${issue.body}`});
+        messages.push({"role": "user", "content": readData("./prompts/analysis_issue2.txt") + ` [issue] ${issue.title} #${issue.number} submitted by @${issue.user.login}: ${issue.body}`});
         
         writeData(repoOwner, repoName, "issue-input", issue.number, messages);
         
         const response = await openai.createChatCompletion({
-          model: openaimModel,
+          model: chatModel,
           messages: messages,
           temperature: 0.1,
-          max_tokens: 4000,
+          max_tokens: 2000,
         });
 
         writeData(repoOwner, repoName, "issue-output", issue.number, response.data);
